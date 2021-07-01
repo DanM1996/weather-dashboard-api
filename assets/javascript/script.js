@@ -1,9 +1,12 @@
-var apiKey = "588cb54af9e39e64a535d1bc49b2842f";
+var citiesArr = [];
+var fiveDayContainerEl = document.querySelector("#five-day-container");
 
+var apiKey = "588cb54af9e39e64a535d1bc49b2842f";
 
 function dailyWeather() {
     var searchCity = document.querySelector("#city-search").value;
-    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=" + apiKey + "")
+    var oneDayApi = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=" + apiKey; 
+    fetch(oneDayApi)
     .then(function(oneDay){
         return oneDay.json();
     })
@@ -21,8 +24,6 @@ function dailyWeather() {
         showDailyHumidity.innerHTML = currentHumidity;
         showDailyWind.innerHTML = windSpeed;
 
-        
-
         var cityLat = oneDay.coord.lat;
         var cityLon = oneDay.coord.lon;
 
@@ -36,9 +37,20 @@ function dailyWeather() {
             var showUV = document.querySelector("#currentUV");
             showUV.innerHTML = uvIndex;
         })
-        var iconContainer = document.querySelector("#icon")
-        var imgIcon = document.createElement('img');
-        imgIcon.setAttribute('src', oneDay.main.weather[0].icon)
-        iconContainer.appendChild(imgIcon);
     })
+    forecast();
 }
+
+function forecast() {
+    var searchCity = document.querySelector("#city-search").value;
+    var fiveDayApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=" + apiKey + "&units=metric";
+    fetch(fiveDayApi)
+    .then(function(fiveDay){
+        return fiveDay.json();
+    })
+    .then(function(fiveDay){
+        console.log(fiveDay.main.temp);
+    })
+    
+}
+    
