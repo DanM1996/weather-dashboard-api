@@ -43,14 +43,17 @@ function dailyWeather() {
 
 function forecast() {
     var searchCity = document.querySelector("#city-search").value;
-    var fiveDayApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=" + apiKey + "&units=metric";
+    var fiveDayApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=" + apiKey;
     fetch(fiveDayApi)
     .then(function(fiveDay){
         return fiveDay.json();
     })
     .then(function(fiveDay){
-        console.log(fiveDay.main.temp);
+        console.log(fiveDay.list[0].main.temp, fiveDay.list[1].main.temp);
+        console.log(fiveDay)
+        console.log(fiveDay.list[0].main.humidity, fiveDay.list[0].wind.speed);
     })
     
 }
-    
+
+
