@@ -12,20 +12,28 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <main>
-        <h2>Search for a City:</h2>
-        <input type="text" id="city-search" 
-        placeholder="New York">
-        <button onclick="dailyWeather()">Search!</button>
-        <div id="daily-contaier">
-            <h2 id="cityName"><div id="icon"></div></h2>
-            <p id="currentTemp"></p>
-            <p id="currentHumidity"></p>
-            <p id="currentWind"></p>
-            <p id="currentUV"></p>
+    <main> 
+        <div class="container">
+            <h2>Search for a City:</h2>
+            <input type="text" id="city-search" placeholder="New York">
+            <button onclick="dailyWeather()">Search!</button>
         </div>
-        <div id="five-day-container">
-            <h2 id="forecast-title"></h2>
+        <div class="container">
+            <div id="daily-contaier">
+                <h2 id="cityName"><div id="icon"></div></h2>
+                <p id="currentTemp"></p>
+                <p id="currentHumidity"></p>
+                <p id="currentWind"></p>
+                <p id="currentUV"></p>
+            </div>
+            <div id="five-day-container">
+                <h2 id="forecast-title">5-Day Forecast</h2>
+                <div id="day-one"></div>
+                <div id="day-two"></div>
+                <div id="day-three"></div>
+                <div id="day-four"></div>
+                <div id="day-five"></div>
+            </div>
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
