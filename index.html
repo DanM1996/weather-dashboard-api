@@ -14,37 +14,36 @@
     </header>
     <main> 
         <div class="container">
-            <div class="row justify-content-start">
-                <div class="col-4">
+            <div class="flex">
+                <div class="col-4 margin-size">
                     <h2>Search for a City:</h2>
                     <input type="text" id="city-search" placeholder="New York">
                     <button class="btn btn-primary search-btn" onclick="dailyWeather()">Search!</button>
                     <div id="city-list">
                     </div>
                 </div>
+            <div class="col-8 margin-height">   
+                    <div id="daily-contaier" class="dayBorder">
+                        <h2 id="cityName"></h2>
+                        <p id="currentTemp"></p>
+                        <p id="currentHumidity"></p>
+                        <p id="currentWind"></p>
+                        <p id="currentUV"></p>
+                    </div>
+                    <div id="five-day-container" >
+                        <h2 id="forecast-title">5-Day Forecast</h2>
+                        <div class="flex">
+                            <div id="day-one"></div>
+                            <div id="day-two"></div>
+                            <div id="day-three"></div>
+                            <div id="day-four"></div>
+                            <div id="day-five"></div>
+                        </div>
+                    </div>
+            </div>
             </div>
         </div>
-        <div class="container"> 
-            <div class="row justify-content-center">  
-                <div id="daily-contaier" class="col-8 dayBorder">
-                    <h2 id="cityName"></h2>
-                    <p id="currentTemp"></p>
-                    <p id="currentHumidity"></p>
-                    <p id="currentWind"></p>
-                    <p id="currentUV"></p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div id="five-day-container" class="col-4">
-                    <h2 id="forecast-title">5-Day Forecast</h2>
-                    <div id="day-one"></div>
-                    <div id="day-two"></div>
-                    <div id="day-three"></div>
-                    <div id="day-four"></div>
-                    <div id="day-five"></div>
-                </div>
-            </div>
-        </div>
+        
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

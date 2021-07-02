@@ -29,3 +29,15 @@ input {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+.flex{
+    display: flex;
+}
+.margin-size {
+    margin-right: 1.5rem;
+}
+.margin-height{
+    margin-top: 2rem;
+}
+#five-day-container {
+    margin-top: 1rem;
+}
