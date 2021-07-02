@@ -1,0 +1,11 @@
+.center {
+    padding: 25px 10px;
+    text-align: center;
+    background-image: linear-gradient(to right, blue, indigo);
+    color: white;
+}
+.dayBorder {
+    padding: 10px;
+    border-width: 4px;
+    border-style: ridge;
+}

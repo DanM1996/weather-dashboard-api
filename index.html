@@ -10,29 +10,36 @@
 </head>
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
+        <h1 class="center">Weather Dashboard</h1>
     </header>
     <main> 
         <div class="container">
-            <h2>Search for a City:</h2>
-            <input type="text" id="city-search" placeholder="New York">
-            <button onclick="dailyWeather()">Search!</button>
-        </div>
-        <div class="container">
-            <div id="daily-contaier">
-                <h2 id="cityName"><div id="icon"></div></h2>
-                <p id="currentTemp"></p>
-                <p id="currentHumidity"></p>
-                <p id="currentWind"></p>
-                <p id="currentUV"></p>
+            <div class="row justify-content-start">
+                <div class="col-4">
+                    <h2>Search for a City:</h2>
+                    <input type="text" id="city-search" placeholder="New York">
+                    <button class="btn btn-primary search-btn" onclick="dailyWeather()">Search!</button>
+                    <div id="city-list">
+                    </div>
+                </div>
+            
+                <div id="daily-contaier" class="col-8 dayBorder">
+                    <h2 id="cityName"></h2>
+                    <p id="currentTemp"></p>
+                    <p id="currentHumidity"></p>
+                    <p id="currentWind"></p>
+                    <p id="currentUV"></p>
+                </div>
             </div>
-            <div id="five-day-container">
-                <h2 id="forecast-title">5-Day Forecast</h2>
-                <div id="day-one"></div>
-                <div id="day-two"></div>
-                <div id="day-three"></div>
-                <div id="day-four"></div>
-                <div id="day-five"></div>
+            <div class="row justify-content-center">
+                <div id="five-day-container" class="col-4">
+                    <h2 id="forecast-title">5-Day Forecast</h2>
+                    <div id="day-one"></div>
+                    <div id="day-two"></div>
+                    <div id="day-three"></div>
+                    <div id="day-four"></div>
+                    <div id="day-five"></div>
+                </div>
             </div>
         </div>
     </main>
