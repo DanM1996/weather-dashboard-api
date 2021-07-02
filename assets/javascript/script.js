@@ -14,7 +14,6 @@ var forecastDay5 = document.querySelector("#day-five");
 var cityButtons = document.querySelector(".city");
 
 cityList.addEventListener("click", function(event){
-    console.log(event.target.id); 
     dailyWeather(searchedCities[event.target.id])
  });
 
@@ -82,19 +81,19 @@ function forecast(searchPlace) {
     .then(function(fiveDay){
         
         // create variables to log the data of temp, humidity, and wind speed for 5 days
-        var day1Temp = "Temp: " + fiveDay.list[1].main.temp;
+        var day1Temp = "Temp: " + fiveDay.list[1].main.temp + "°F";
         var day1Humidity = " Humitidy: " + fiveDay.list[1].main.humidity
         var day1Wind = " Wind Speed: " + fiveDay.list[1].wind.speed; 
-        var day2Temp = "Temp: " + fiveDay.list[2].main.temp;
+        var day2Temp = "Temp: " + fiveDay.list[2].main.temp + "°F";
         var day2Humidity = " Humitidy: " + fiveDay.list[2].main.humidity
         var day2Wind = " Wind Speed: " + fiveDay.list[2].wind.speed;
-        var day3Temp = "Temp: " + fiveDay.list[3].main.temp;
+        var day3Temp = "Temp: " + fiveDay.list[3].main.temp + "°F";
         var day3Humidity = " Humitidy: " + fiveDay.list[3].main.humidity
         var day3Wind = " Wind Speed: " + fiveDay.list[3].wind.speed;
-        var day4Temp = "Temp: " + fiveDay.list[4].main.temp;
+        var day4Temp = "Temp: " + fiveDay.list[4].main.temp + "°F";
         var day4Humidity = " Humitidy: " + fiveDay.list[4].main.humidity
         var day4Wind = " Wind Speed: " + fiveDay.list[4].wind.speed;
-        var day5Temp = "Temp: " + fiveDay.list[5].main.temp;
+        var day5Temp = "Temp: " + fiveDay.list[5].main.temp + "°F";
         var day5Humidity = " Humitidy: " + fiveDay.list[5].main.humidity
         var day5Wind = " Wind Speed: " + fiveDay.list[5].wind.speed;
 
