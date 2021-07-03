@@ -23,8 +23,8 @@
                     </div>
                 </div>
             <div class="col-8 margin-height">   
-                    <div id="daily-contaier" class="dayBorder">
-                        <h2 id="cityName"></h2>
+                    <div id="daily-container" class="dayBorder">
+                        <h2 id="cityName"><div id="iconImg"></div></h2>
                         <p id="currentTemp"></p>
                         <p id="currentHumidity"></p>
                         <p id="currentWind"></p>
@@ -33,17 +33,51 @@
                     <div id="five-day-container" >
                         <h2 id="forecast-title">5-Day Forecast</h2>
                         <div class="flex">
-                            <div id="day-one"></div>
-                            <div id="day-two"></div>
-                            <div id="day-three"></div>
-                            <div id="day-four"></div>
-                            <div id="day-five"></div>
+                            <div class="card bg-dark text-white m-2 p-2">
+                                <div id="day-one">
+                                    <p id="oneDate"></p>
+                                    <p id="oneTemp"></p>
+                                    <p id="oneHumid"></p>
+                                    <p id="oneWind"></p>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white m-2 p-2">
+                                <div id="day-two">
+                                    <p id="twoDate"></p>
+                                    <p id="twoTemp"></p>
+                                    <p id="twoHumid"></p>
+                                    <p id="twoWind"></p>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white m-2 p-2">
+                                <div id="day-three">
+                                    <p id="threeDate"></p>
+                                    <p id="threeTemp"></p>
+                                    <p id="threeHumid"></p>
+                                    <p id="threeWind"></p>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white m-2 p-2">
+                                <div id="day-four">
+                                    <p id="fourDate"></p>
+                                    <p id="fourTemp"></p>
+                                    <p id="fourHumid"></p>
+                                    <p id="fourWind"></p>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white m-2 p-2">
+                                <div id="day-five">
+                                    <p id="fiveDate"></p>
+                                    <p id="fiveTemp"></p>
+                                    <p id="fiveHumid"></p>
+                                    <p id="fiveWind"></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
             </div>
             </div>
-        </div>
-        
+        </div>   
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
