@@ -22,7 +22,7 @@ By clicking the buttons on the side, you'll be able to recall cities you already
 
 ## Access the Application
 
-To see the application in action, follow [this link](https://danm1996.github.io/weather-dashboard-api/https://danm1996.github.io/weather-dashboard-api/) to the main page.
+To see the application in action, follow [this link](https://danm1996.github.io/weather-dashboard-api/) to the main page.
 
 
 
